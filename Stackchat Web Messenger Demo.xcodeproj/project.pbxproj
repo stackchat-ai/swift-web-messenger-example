@@ -15,6 +15,9 @@
 		7E34B8F124B4AD3300620C2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E34B8EF24B4AD3300620C2A /* LaunchScreen.storyboard */; };
 		7E34B8FC24B4AD3300620C2A /* Stackchat_Web_Messenger_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B8FB24B4AD3300620C2A /* Stackchat_Web_Messenger_DemoTests.swift */; };
 		7E34B90724B4AD3300620C2A /* Stackchat_Web_Messenger_DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E34B90624B4AD3300620C2A /* Stackchat_Web_Messenger_DemoUITests.swift */; };
+		7E9B699F24B55B5E0006C7A1 /* WebMessengerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B699E24B55B5E0006C7A1 /* WebMessengerConfiguration.swift */; };
+		7E9B69A124B56FE60006C7A1 /* ButtonIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E9B69A024B56FE60006C7A1 /* ButtonIcon.swift */; };
+		7EB78CFD24B5A00A00F5782B /* CustomHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB78CFC24B5A00A00F5782B /* CustomHTML.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		7E34B90224B4AD3300620C2A /* Stackchat Web Messenger DemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stackchat Web Messenger DemoUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E34B90624B4AD3300620C2A /* Stackchat_Web_Messenger_DemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stackchat_Web_Messenger_DemoUITests.swift; sourceTree = "<group>"; };
 		7E34B90824B4AD3300620C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E9B699E24B55B5E0006C7A1 /* WebMessengerConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebMessengerConfiguration.swift; sourceTree = "<group>"; };
+		7E9B69A024B56FE60006C7A1 /* ButtonIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonIcon.swift; sourceTree = "<group>"; };
+		7EB78CFC24B5A00A00F5782B /* CustomHTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHTML.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				7E34B8EF24B4AD3300620C2A /* LaunchScreen.storyboard */,
 				7E34B8F224B4AD3300620C2A /* Info.plist */,
 				7E34B8EC24B4AD3300620C2A /* Preview Content */,
+				7E9B699E24B55B5E0006C7A1 /* WebMessengerConfiguration.swift */,
+				7E9B69A024B56FE60006C7A1 /* ButtonIcon.swift */,
+				7EB78CFC24B5A00A00F5782B /* CustomHTML.swift */,
 			);
 			path = "Stackchat Web Messenger Demo";
 			sourceTree = "<group>";
@@ -268,6 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E34B8E524B4AD3300620C2A /* AppDelegate.swift in Sources */,
+				7E9B69A124B56FE60006C7A1 /* ButtonIcon.swift in Sources */,
+				7E9B699F24B55B5E0006C7A1 /* WebMessengerConfiguration.swift in Sources */,
+				7EB78CFD24B5A00A00F5782B /* CustomHTML.swift in Sources */,
 				7E34B8E724B4AD3300620C2A /* SceneDelegate.swift in Sources */,
 				7E34B8E924B4AD3300620C2A /* ContentView.swift in Sources */,
 			);
