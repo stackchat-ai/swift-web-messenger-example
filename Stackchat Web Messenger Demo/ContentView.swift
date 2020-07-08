@@ -10,12 +10,13 @@ import SwiftUI
 import WebKit
 
 struct ContentView: View {
-    @State var webMessengerConfig: WebMessengerConfig? = nil
+//    @State var webMessengerConfig: WebMessengerConfig? = nil
+    @State private var iconUrl: String?
     @State private var appId = ""
     
     private func getWebMessengerConfig() {
         let url = URL(string: "https://api.io.au.stackchat.com/config/apps/\(appId)/config")!
-        print(url)
+        
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
@@ -34,17 +35,11 @@ struct ContentView: View {
             let json = try! JSONSerialization.jsonObject(with: content)
             let jsonObject = json as! [String: [String: Any]]
             
-            guard let _data = jsonToNSData(json:jsonObject["config"]!["webMessengerConfig"] as AnyObject) else {
-                print("No config")
+            guard let buttonIconUrl = (jsonObject["config"]!["webMessengerConfig"] as! [String: Any])["buttonIconUrl"] else {
+                print("No icon")
                 return
             }
-            
-            let parsedData = try? JSONDecoder().decode(
-                WebMessengerConfig.self,
-                from: _data
-            )
-            
-            self.webMessengerConfig = parsedData
+            self.iconUrl = buttonIconUrl as? String
         }
         task.resume()
     }
@@ -85,7 +80,7 @@ struct ContentView: View {
                 .padding(EdgeInsets(top: 0, leading: 20, bottom: 20, trailing: 20))
                 
                 // Floating Button
-                WebMessengerLauncher(appId: appId, iconUrl: webMessengerConfig?.buttonIconURL)
+                WebMessengerLauncher(appId: appId, iconUrl: iconUrl)
             }
             .navigationBarTitle("Stackchat Demo")
         }
@@ -115,7 +110,6 @@ struct WebMessengerLauncher: View {
                 .onTapGesture {
                     self.isPresented = true
             }.sheet(isPresented: $isPresented) {
-//                WebView()
                 WebView(customHTML: getCustomHTML(appId: self.appId!))
             }
         } else {
